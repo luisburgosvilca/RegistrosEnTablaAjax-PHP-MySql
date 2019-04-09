@@ -534,7 +534,7 @@
                         <input type="text" class="form-control" id="seguro" placeholder="Compañia de Seguro">
                       </div>
                       <div class="col-xs-2">
-                          <input type="text" class="form-control pull-right" id="datepicker">
+                          <input type="text" class="form-control pull-right" placeholder="Fecha de Registro" id="datepicker">
                           
                       </div>
                       <div class="col-xs-1">
@@ -779,8 +779,7 @@
 
 <!-- jQuery 3 -->
 <script src="includes/bower_components/jquery/dist/jquery.min.js"></script>
-<!-- bootstrap datepicker -->
-<script src="includes/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+
 <!-- Bootstrap 3.3.7 -->
 <script src="includes/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- FastClick -->
@@ -791,14 +790,19 @@
 <script src="includes/dist/js/demo.js"></script>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
-  <script>
+<!-- bootstrap datepicker -->
+<script src="includes/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script>
+    $(function(){
+        //Date picker
+        $('#datepicker').datepicker({ format: 'yyyy-mm-dd', autoclose: true})
+    })
+
+</script>  
+
+<script>
   
 $(document).on('ready',function(){
-    
-                //Date picker
-    $('#datepicker').datepicker({
-      autoclose: true
-    });
         
             var usuario = $("#usuario").val();
                 nombre  = $("#nombre").val();
